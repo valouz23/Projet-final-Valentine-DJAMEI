@@ -25,8 +25,7 @@ $sql_product = "CREATE table IF NOT EXISTS product(
             description VARCHAR(255),
             name VARCHAR(50),
             title VARCHAR(50),
-            author VARCHAR(50),
-            nb_page INT(5)
+            author VARCHAR(50)
             )";
 
 if(!mysqli_query($connection, $sql_product)) {
@@ -46,22 +45,13 @@ if(!mysqli_query($connection, $sql_cart)) {
     echo 'Table cart created successfully' . PHP_EOL;
 }
 
-$sql_add_apple = "INSERT INTO product values (
-    1,
-    'fruit',
-    1,
-    10,
-    NULL,
-    'Pomme',
-    NULL,
-    NULL,
-    NULL)";
-
-if(!mysqli_query($connection, $sql_add_apple)) {
-    echo 'Error creating tuple apple : ' . mysqli_error($connection);
-}else{
-    echo 'Tuple apple created successfully' . PHP_EOL;
-}
-
 
 mysqli_close($connection);
+
+
+// $sql_drop_data = "DROP DATABASE magasin";
+// if(!mysqli_query($connection, $sql_drop_data)) {
+//         echo 'Error deleting database magasin : ' . mysqli_error($connection);
+//     }else{
+//         echo 'Database magasin deleted successfully' . PHP_EOL;
+//     }

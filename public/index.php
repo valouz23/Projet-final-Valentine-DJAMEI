@@ -17,8 +17,10 @@ $pdo = new PDO('mysql:host=localhost;dbname=magasin', 'root', 'WINmaths42',[
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 ]);
-$result = $pdo->query($sql_all_fruit);
-$fruit = $result->fetchAll();
+$resultFruit = $pdo->query($sql_all_fruit);
+$fruit = $resultFruit->fetchAll();
+$resultBook = $pdo->query($sql_all_book);
+$book = $resultBook->fetchAll();
 
 ?>
 
@@ -30,28 +32,59 @@ $fruit = $result->fetchAll();
         <link href="./css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <div>
+        <div class="text-center">
             <h1>Des Fruits et des Livres</h1>
         </div>
 
-        <div>
-            <h2> Voici notre sélection de fruits</h2-->
-            <?php foreach($fruit as $f):?>
-                <div class="card text-bg-dark mb-3 shadow">
-                <div class="card-body text-center">
-                    <!-- <img src="" class="card-img-bottom"> -->
-                    <div class="card-title">
-                        <h3 class="text-warning"><?php echo($f['name']) ?></h3>
-                    </div>
-                    <p class="card-text">
-                        <h3>Prix : <?php echo($f['price'] . ' euros') ?></h3>
-                        <h3>Stock : <?php echo $f['stock'] ?></h3>
-                    </p>
-                    <button id="b<?php echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
+        <div class="row">
+
+            <div class="text-center">
+                <h2 class="text-success"> Voici notre sélection de fruits</h2>
+                <div class="row">
+                    <?php foreach($fruit as $f):?>
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-bg mb-3 shadow">
+                                <!--img class="card-img-top" src=""-->
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2><?php echo($f['name']) ?></h2>
+                                    </div>
+                                    <ul class="list-group, list-flush">
+                                        <li class="list-group-item"> <h4>Prix : <?php echo($f['price'] . ' euros') ?></h4></li>
+                                        <li class="list-group-item"> <h4>Stocks disponibles : <?php echo $f['stock'] ?></h4></li>
+                                        <li class="list-group-item"> <h4>Description : <?php echo $f['description'] ?></h4></li>
+                                    </ul>
+                                    <button id="b<?php echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--div class="card text-bg mb-3 shadow">
+                            <div class="card-body text-center">
+                                <img src="" class="card-img-bottom">
+                                <div class="card-title">
+                                    <h3 class="text-danger"></h3>
+                                </div>
+                                <p class="card-text">
+                                    <h6>Prix : </h6>
+                                    <h6>Stock : </h6>
+                                </p>
+                                <button id="b<?php //echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
+                            </div>
+                        </div-->
+                    <?php endforeach ;?>
                 </div>
             </div>
-            <?php endforeach ;?>
-            <h2> Voici notre sélection de livres</h2>
+
+
+            <div class="text-center">
+                <h2 class="text-warning"> Voici notre sélection de livres</h2>
+
+            </div>
+
+
         </div>
     </body>
 </html>
