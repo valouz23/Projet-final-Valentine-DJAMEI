@@ -36,7 +36,8 @@ if(!mysqli_query($connection, $sql_product)) {
 
 $sql_cart = "CREATE table IF NOT EXISTS cart(
             id INT(6) NOT NULL,
-            num_product INT(6) NOT NULL 
+            num_product INT(6) NOT NULL,
+            quantity INT(6) NOT NULL,
             )";
 
 if(!mysqli_query($connection, $sql_cart)) {

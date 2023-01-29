@@ -12,7 +12,7 @@ $user = new Cart(1);
 
 $connection = mysqli_connect('localhost', 'root', 'WINmaths42', 'magasin');
 $sql_all_fruit = "SELECT name, price, stock, description FROM product WHERE type = 'fruit' ORDER BY name";
-$sql_all_book = "SELECT title, author, nb_page, price, stock, description FROM product WHERE type = 'livre' ORDER BY title";
+$sql_all_book = "SELECT title, author, price, stock, description FROM product WHERE type = 'livre' ORDER BY title";
 $pdo = new PDO('mysql:host=localhost;dbname=magasin', 'root', 'WINmaths42',[
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
