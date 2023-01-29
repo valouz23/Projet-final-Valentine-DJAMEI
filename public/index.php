@@ -32,11 +32,19 @@ $book = $resultBook->fetchAll();
         <link href="./css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <div class="text-center">
-            <h1>Des Fruits et des Livres</h1>
+        <div class="row">
+            <div class="col-8 text-center">
+                <h1>Des Fruits et des Livres</h1>
+            </div>
+            <div class="col-3 text-center">
+                <button class ="btn btn-success mt-1" id="goToEmployee">Je travaille ici</button>
+                <button class ="btn btn-success mt-1" id="goToCustomer">Je suis client</button>
+            </div>
         </div>
 
         <div class="row">
+            <div id="ajoutBDD" class="text-center"></div>
+
 
             <div class="text-center">
                 <h2 class="text-success"> Voici notre sélection de fruits</h2>
@@ -60,20 +68,6 @@ $book = $resultBook->fetchAll();
                             </div>
                         </div>
 
-
-                        <!--div class="card text-bg mb-3 shadow">
-                            <div class="card-body text-center">
-                                <img src="" class="card-img-bottom">
-                                <div class="card-title">
-                                    <h3 class="text-danger"></h3>
-                                </div>
-                                <p class="card-text">
-                                    <h6>Prix : </h6>
-                                    <h6>Stock : </h6>
-                                </p>
-                                <button id="b<?php //echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
-                            </div>
-                        </div-->
                     <?php endforeach ;?>
                 </div>
             </div>
@@ -86,5 +80,6 @@ $book = $resultBook->fetchAll();
 
 
         </div>
+        <script src="./js/app.js"></script>
     </body>
 </html>
