@@ -1,5 +1,5 @@
 <?php
-/*
+
 $connection = mysqli_connect('localhost', 'root', 'WINmaths42');
 $sql_db = "CREATE DATABASE IF NOT EXISTS magasin";
 if(!mysqli_query($connection, $sql_db)) {
@@ -46,4 +46,22 @@ if(!mysqli_query($connection, $sql_cart)) {
     echo 'Table cart created successfully' . PHP_EOL;
 }
 
-mysqli_close($connection);*/
+$sql_add_apple = "INSERT INTO product values (
+    1,
+    'fruit',
+    1,
+    10,
+    NULL,
+    'Pomme',
+    NULL,
+    NULL,
+    NULL)";
+
+if(!mysqli_query($connection, $sql_add_apple)) {
+    echo 'Error creating tuple apple : ' . mysqli_error($connection);
+}else{
+    echo 'Tuple apple created successfully' . PHP_EOL;
+}
+
+
+mysqli_close($connection);
