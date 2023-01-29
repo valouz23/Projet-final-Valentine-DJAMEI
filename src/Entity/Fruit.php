@@ -2,7 +2,7 @@
 
 namespace AppStore\Entity;
 
-use Appstore\Entity\AbstractEntity;
+use Appstore\Entity\AbstractEntity\Product;
 
 class Fruit extends Product{
 
