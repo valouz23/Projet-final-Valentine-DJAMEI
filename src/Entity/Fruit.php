@@ -22,3 +22,6 @@ class Fruit extends Product{
         return($this->name);
     }
 }
+
+$fruit = new Fruit(1);
+echo($fruit->getID());

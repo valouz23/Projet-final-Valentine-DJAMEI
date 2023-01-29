@@ -45,3 +45,6 @@ class Cart {
         }
     }
 }
+
+$user = new Cart(1);
+echo($user->getId());
