@@ -2,14 +2,14 @@
 
 namespace AppStore\Entity;
 
-use Appstore\Entity\AbstractEntity\Product;
+use AppStore\Entity\AbstractEntity\AbstractProduct;
 
-class Book extends Product{
+class Book extends AbstractProduct{
 
     private string $title;
     private string $author;
 
-    public function __construct($id)
+    public function __construct()
     {
         $this->type = 'livre';
     }
@@ -32,6 +32,3 @@ class Book extends Product{
         return($this->author);
     }
 }
-
-$book = new Book(2);
-echo ($book->getId());

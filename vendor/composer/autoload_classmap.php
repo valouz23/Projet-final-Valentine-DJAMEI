@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AppStore\\Connection' => $baseDir . '/src/Connection.php',
     'AppStore\\Controller\\ProductController' => $baseDir . '/src/Controller/ProductController.php',
-    'AppStore\\Entity\\AbstractEntity\\Product' => $baseDir . '/src/Entity/AbstractEntity/Product.php',
+    'AppStore\\Entity\\AbstractEntity\\AbstractProduct' => $baseDir . '/src/Entity/AbstractEntity/AbstractProduct.php',
     'AppStore\\Entity\\Book' => $baseDir . '/src/Entity/Book.php',
     'AppStore\\Entity\\Cart' => $baseDir . '/src/Entity/Cart.php',
     'AppStore\\Entity\\Fruit' => $baseDir . '/src/Entity/Fruit.php',

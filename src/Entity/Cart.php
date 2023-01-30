@@ -5,19 +5,13 @@ namespace AppStore\Entity;
 class Cart {
 
     private int $id;
-    private array $list_product;
+    private array $list_product= array();
 
-    public function __construct($i)
-    {
-        $this->id = $i;
-        $this->list_product = array();
-    }
-
-    public function setID($i)
+    public function setId($i)
     {
         $this->id = $i;
     }
-    public function getID() : int
+    public function getId() : int
     {
         return($this->id);
     }

@@ -2,33 +2,28 @@
 
 namespace AppStore\Entity\AbstractEntity;
 
-abstract class Product {
+abstract class AbstractProduct {
 
     private int $id;
     private string $type;
     private int $price;
     private int $stock;
-    private string $description;
+    private string $description = "No description available";
 
-    public function __construct($id)
-    {
-        $this->id = $id;
-        $this->description = "No description available\n";
-    }
-
-    public function setID($i)
+    public function setId($i)
     {
         $this->id = $i;
     }
-    public function getID() : int
+
+    public function getId()
     {
-        return($this->id);
+        return ($this->id);
     }
 
     public function setType($t)
     {
         if (!$t=='fruit' and !$t=='livre'){
-            echo "Must be type fruit or livre \n";
+            return ("Must be type fruit or livre \n");
         } else {
             $this->type = $t;
         }
@@ -51,7 +46,7 @@ abstract class Product {
     {
         $this->stock = $s;
     }
-    public function getStock() : intdiv
+    public function getStock() : int
     {
         return($this->stock);
     }
@@ -62,7 +57,6 @@ abstract class Product {
     }
     public function getDesc() : string
     {
-        return($this->desciprion);
+        return($this->description);
     }
 }
-?>

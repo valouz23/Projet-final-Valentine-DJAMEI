@@ -16,7 +16,7 @@ class ProductController{
 
     public function handleRequest(){
         $errors = [];
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
+        if($_SERVER["REQUEST_METHOD"] = "POST"){
             if(empty($_POST['id']) or ($_POST['type']<>'fruit' and $_POST['type']<>'livre') or empty($_POST['price']) or empty($_POST['stock']))
             {
                 $errors[] = "Veuillez remplir les champs correctement";
@@ -32,7 +32,7 @@ class ProductController{
                     $fruit->setPrice($_POST['price']);
                     $fruit->setStock($_POST['stock']);
                     $fruit->setName($_POST['name']);
-                    $this->productRepository->addFruit($book->getId(), $book->getPrice(), $book->getStock(), $book->getName());
+                    $this->productRepository->addFruit($fruit->getID(), $fruit->getPrice(), $fruit->getStock(), $fruit->getName());
                 }
             } else {
                 if(empty($_POST['author']) or empty($_POST['title'])){
@@ -44,7 +44,7 @@ class ProductController{
                     $book->setStock($_POST['stock']);
                     $book->setTitle($_POST['title']);
                     $book->setAuthor($_POST['author']);
-                    $this->productRepository->addBook($book->getId(), $book->getPrice(), $book->getStock(), $book->getTitle(), $book->getAuthor());
+                    $this->productRepository->addBook($book->getID(), $book->getPrice(), $book->getStock(), $book->getTitle(), $book->getAuthor());
                 }
             }
             header('Location: /');

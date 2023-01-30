@@ -65,20 +65,20 @@ $productController->handleRequest();
             <div class="text-center">
                 <h2 class="text-danger"> Voici notre sélection de livres</h2>
                 <div class="row">
-                    <?php foreach($book as $b) : ?>
+                    <?php foreach($book as $f) : ?>
                         <div class="col-md-4 mb-3">
                         <div class="card text-bg mb-3 shadow">
                             <!--img class="card-img-top" src=""-->
                             <div class="card-body">
                                 <div class="card-title">
-                                    <h2><?php echo($f['name']) ?></h2>
+                                    <h2><?php echo($f['title']) ?></h2>
                                 </div>
                                 <ul class="list-group, list-flush">
                                     <li class="list-group-item"> <h4>Prix : <?php echo($f['price'] . ' euros') ?></h4></li>
                                     <li class="list-group-item"> <h4>Stocks disponibles : <?php echo $f['stock'] ?></h4></li>
-                                    <li class="list-group-item"> <h4>Description : <?php echo $f['description'] ?></h4></li>
+                                    <li class="list-group-item"> <h4>Auteur : <?php echo $f['author'] ?></h4></li>
                                 </ul>
-                                <!--button id="b<?php //echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button-->
+                                <button id="b<?php //echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
                             </div>
                         </div>
                     </div>
