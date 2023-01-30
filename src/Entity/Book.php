@@ -8,7 +8,6 @@ class Book extends Product{
 
     private string $title;
     private string $author;
-    private string $nb_page;
 
     public function __construct($id)
     {
@@ -32,13 +31,7 @@ class Book extends Product{
     {
         return($this->author);
     }
-
-    public function setNb_Page($n)
-    {
-        $this->nb_page = $n;
-    }
-    public function getNb_Page($n) : int 
-    {
-        return($this->nb_page);
-    }
 }
+
+$book = new Book(2);
+echo ($book->getId());

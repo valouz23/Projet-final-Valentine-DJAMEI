@@ -4,7 +4,7 @@ namespace AppStore\Entity;
 
 use Appstore\Entity\AbstractEntity\Product;
 
-class Fruit extends Product{
+class Fruit extends Product {
 
     private string $name;
     

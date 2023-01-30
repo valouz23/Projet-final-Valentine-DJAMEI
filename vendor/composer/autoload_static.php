@@ -62,10 +62,14 @@ class ComposerStaticInitc567be0223ddbc1ed8678444551dac99
     );
 
     public static $classMap = array (
+        'AppStore\\Connection' => __DIR__ . '/../..' . '/src/Connection.php',
+        'AppStore\\Controller\\ProductController' => __DIR__ . '/../..' . '/src/Controller/ProductController.php',
         'AppStore\\Entity\\AbstractEntity\\Product' => __DIR__ . '/../..' . '/src/Entity/AbstractEntity/Product.php',
         'AppStore\\Entity\\Book' => __DIR__ . '/../..' . '/src/Entity/Book.php',
         'AppStore\\Entity\\Cart' => __DIR__ . '/../..' . '/src/Entity/Cart.php',
         'AppStore\\Entity\\Fruit' => __DIR__ . '/../..' . '/src/Entity/Fruit.php',
+        'AppStore\\Repository\\CartRepository' => __DIR__ . '/../..' . '/src/Repository/CartRepository.php',
+        'AppStore\\Repository\\ProductRepository' => __DIR__ . '/../..' . '/src/Repository/ProductRepository.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',

@@ -2,6 +2,8 @@
 
 namespace AppStore;
 
+use PDO;
+
 abstract class Connection{
     private static $instance = null;
     private const PDO_OPTIONS = [

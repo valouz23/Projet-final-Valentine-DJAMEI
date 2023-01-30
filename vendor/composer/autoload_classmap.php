@@ -6,10 +6,14 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AppStore\\Connection' => $baseDir . '/src/Connection.php',
+    'AppStore\\Controller\\ProductController' => $baseDir . '/src/Controller/ProductController.php',
     'AppStore\\Entity\\AbstractEntity\\Product' => $baseDir . '/src/Entity/AbstractEntity/Product.php',
     'AppStore\\Entity\\Book' => $baseDir . '/src/Entity/Book.php',
     'AppStore\\Entity\\Cart' => $baseDir . '/src/Entity/Cart.php',
     'AppStore\\Entity\\Fruit' => $baseDir . '/src/Entity/Fruit.php',
+    'AppStore\\Repository\\CartRepository' => $baseDir . '/src/Repository/CartRepository.php',
+    'AppStore\\Repository\\ProductRepository' => $baseDir . '/src/Repository/ProductRepository.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
     'DeepCopy\\Exception\\CloneException' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
