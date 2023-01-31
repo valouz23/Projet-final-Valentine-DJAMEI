@@ -46,12 +46,12 @@ $productController->handleRequest();
                             <!--img class="card-img-top" src=""-->
                             <div class="card-body">
                                 <div class="card-title">
-                                    <h2><?php echo($f['name']) ?></h2>
+                                    <h3><?php echo($f['name']) ?></h3>
                                 </div>
                                 <ul class="list-group, list-flush">
-                                    <li class="list-group-item"> <h4>Prix : <?php echo($f['price'] . ' euros') ?></h4></li>
-                                    <li class="list-group-item"> <h4>Stocks disponibles : <?php echo $f['stock'] ?></h4></li>
-                                    <li class="list-group-item"> <h4>Description : <?php echo $f['description'] ?></h4></li>
+                                    <li class="list-group-item"> <h6>Prix : <?php echo($f['price'] . ' euros') ?></h6></li>
+                                    <li class="list-group-item"> <h6>Stocks disponibles : <?php echo $f['stock'] ?></h6></li>
+                                    <li class="list-group-item"> <h6>Identifiant : <?php echo $f['id'] ?></h6></li>
                                 </ul>
                                 <button id="b<?php echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
                             </div>
@@ -71,12 +71,15 @@ $productController->handleRequest();
                             <!--img class="card-img-top" src=""-->
                             <div class="card-body">
                                 <div class="card-title">
-                                    <h2><?php echo($f['title']) ?></h2>
+                                    <h3><?php echo($f['title']) ?></h3>
                                 </div>
                                 <ul class="list-group, list-flush">
-                                    <li class="list-group-item"> <h4>Prix : <?php echo($f['price'] . ' euros') ?></h4></li>
-                                    <li class="list-group-item"> <h4>Stocks disponibles : <?php echo $f['stock'] ?></h4></li>
-                                    <li class="list-group-item"> <h4>Auteur : <?php echo $f['author'] ?></h4></li>
+                                    <div id="ajoutID">
+                                    <li class="list-group-item"> <h6>Auteur : <?php echo $f['author'] ?></h6></li>
+                                    <li class="list-group-item"> <h6>Prix : <?php echo($f['price'] . ' euros') ?></h6></li>
+                                    <li class="list-group-item"> <h6>Stocks disponibles : <?php echo $f['stock'] ?></h6></li>
+                                    <li class="list-group-item"> <h6>Identifiant : <?php echo $f['id'] ?></h6></li>
+                                    </div>
                                 </ul>
                                 <button id="b<?php //echo $f['name'] ?>" class="btn btn-warning btn-outline-dark">Ajouter au panier</button>
                             </div>

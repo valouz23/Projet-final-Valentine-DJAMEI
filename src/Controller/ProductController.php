@@ -28,23 +28,25 @@ class ProductController{
                     $errors[] = "Veuillez insérer un nom";
                     return $errors;
                 } else {
-                    $fruit= new Fruit($_POST['id']);
+                    $fruit= new Fruit();
+                    $fruit->setId($_POST['id']);
                     $fruit->setPrice($_POST['price']);
                     $fruit->setStock($_POST['stock']);
                     $fruit->setName($_POST['name']);
-                    $this->productRepository->addFruit($fruit->getID(), $fruit->getPrice(), $fruit->getStock(), $fruit->getName());
+                    $this->productRepository->addFruit($fruit->getId(), $fruit->getPrice(), $fruit->getStock(), $fruit->getName());
                 }
             } else {
                 if(empty($_POST['author']) or empty($_POST['title'])){
                     $errors[] = "Veuillez insérer un titre et un auteur";
                     return($errors);
                 }else {
-                    $book= new Book($_POST['id']);
+                    $book= new Book();
+                    $book->setId($_POST['id']);
                     $book->setPrice($_POST['price']);
                     $book->setStock($_POST['stock']);
                     $book->setTitle($_POST['title']);
                     $book->setAuthor($_POST['author']);
-                    $this->productRepository->addBook($book->getID(), $book->getPrice(), $book->getStock(), $book->getTitle(), $book->getAuthor());
+                    $this->productRepository->addBook($book->getId(), $book->getPrice(), $book->getStock(), $book->getTitle(), $book->getAuthor());
                 }
             }
             header('Location: /');

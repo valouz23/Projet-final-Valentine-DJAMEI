@@ -11,7 +11,7 @@ class Book extends AbstractProduct{
 
     public function __construct()
     {
-        $this->type = 'livre';
+        $this->setType('livre');
     }
 
     public function setTitle($t)

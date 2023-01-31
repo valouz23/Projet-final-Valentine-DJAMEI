@@ -1,17 +1,19 @@
 var goToEmployee = document.getElementById("goToEmployee");
 var goToCustomer = document.getElementById("goToCustomer");
+var ajoutID = document.getElementById("ajoutID");
 
 var ajoutBDD = document.getElementById("ajoutBDD");
 
 function fLoadEmployee(){
     ajoutBDD.innerHTML = `<div class="bg-white p-6 rounded-lg shadow-md">
+    <div class = "mb-2"> <h3>Vous pouvez ajouter des articles ici</h3> </div>
     <form id="form-message" method="post">
         <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="id">ID du nouveau produit*</label>
+            <label class="block text-gray-700 font-medium mb-2" for="id">ID du nouveau produit (ne doit pas déjà exister)*</label>
             <input class="bg-gray-200 p-2 rounded-lg w-full" type="int" id="id" name="id" >
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="type">Type de produit (entrer 'fruit' ou 'livre' svp)*</label>
+            <label class="block text-gray-700 font-medium mb-2" for="type">Type de produit (entrer fruit ou livre svp)*</label>
             <input class="bg-gray-200 p-2 rounded-lg w-full" type="text" id="type" name="type" >
         </div>
         <div class="mb-4">
@@ -42,12 +44,16 @@ function fLoadEmployee(){
             <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600" type="submit">Enregistrer</button>
         </div>
     </form>
-</div>`
+</div>`;
+    ajoutID.innerHTML = `<li class="list-group-item"> <h6>Identifiant : <?php echo $f['id'] ?></h6></li>` + ajoutID.innerHTML
 }
 
 
 function fLoadCustomer(){
     ajoutBDD.innerHTML = "";
+    ajoutID.innerHTML = `<li class="list-group-item"> <h6>Auteur : <?php echo $f['author'] ?></h6></li>
+    <li class="list-group-item"> <h6>Prix : <?php echo($f['price'] . ' euros') ?></h6></li>
+    <li class="list-group-item"> <h6>Stocks disponibles : <?php echo $f['stock'] ?></h6></li>`
 }
 
 

@@ -10,7 +10,7 @@ class Fruit extends AbstractProduct{
 
     public function __construct()
     {
-        $this->type = 'fruit';
+        $this->setType('fruit');
     }
 
     public function setName($n)
