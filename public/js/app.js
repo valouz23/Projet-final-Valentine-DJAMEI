@@ -29,15 +29,15 @@ function fLoadEmployee(){
             <textarea class="bg-gray-200 p-2 rounded-lg w-full" type="text" id="description" name="description" >No description available</textarea>
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="name">Nom (uniquement pour fruit) (Utiliser des guillemets, exemple : "Pomme")</label>
+            <label class="block text-gray-700 font-medium mb-2" for="name">Nom (uniquement pour fruit)</label>
             <input class="bg-gray-200 p-2 rounded-lg w-full" type="text" id="name" name="name" >
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="title">Titre (uniquement pour livre) (Utiliser des guillemets, exemple : "Alice au pays des merveilles")</label>
+            <label class="block text-gray-700 font-medium mb-2" for="title">Titre (uniquement pour livre)</label>
             <textarea class="bg-gray-200 p-2 rounded-lg w-full" type="text" id="title" name="title" ></textarea
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2" for="author">Auteur (uniquement pour livre) (Utiliser des guillemets, exemple : "Lewis Carroll")</label>
+            <label class="block text-gray-700 font-medium mb-2" for="author">Auteur (uniquement pour livre)</label>
             <textarea class="bg-gray-200 p-2 rounded-lg w-full" type="text" id="author" name="author" ></textarea>
         </div>
         <div class="text-center text-success">
